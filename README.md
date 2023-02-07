@@ -1,7 +1,5 @@
 	0x00. AirBnB clone - The console
 
-	AirBnB.png
-
 	An object-oriented program typically includes the ability to: create a new object (such as a User or a Place), 
 	retrieve an object from a file, database, or other source, perform operations on objects (such as counting or 
 	computing statistics), update the attributes of an object, and destroy an object when it is no longer needed. 
@@ -35,8 +33,11 @@
     * The length of your files will be tested using wc
     * All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
     * All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
-    * All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
-    * A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+    * All your functions (inside and outside a class) should have a documentation (python3 -c 
+	'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+    * A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, 
+	class or method (the length of it will be verified)
+		
 		Python Unit Tests
 
     * Allowed editors: vi, vim, emacs
@@ -52,9 +53,11 @@
     * You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base_model.py
     * All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
     * All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
-    * All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+    * All your functions (inside and outside a class) should have a documentation (python3 -c 
+	'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
     * We strongly encourage you to work together on test cases, so that you don’t miss any edge case
 		
 		AUTHORS
-	* MESFIN FIKREA - https://github.com/mesfik - fikreamesfin@gmail.com
+
+	* MESFIN FIKREA-[https://github.com/mesfik]/fikreamesfin@gmail.com
 
