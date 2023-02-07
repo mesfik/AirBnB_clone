@@ -2,7 +2,7 @@
 
 	AirBnB.png
 
-An object-oriented program typically includes the ability to: create a new object (such as a User or a Place), retrieve an object from a file, database, or other source, perform operations on objects (such as counting or computing statistics), update the attributes of an object, and destroy an object when it is no longer needed. These actions form the fundamental building blocks of object-oriented programming and allow developers to effectively model real-world objects and relationships within their code.
+	An object-oriented program typically includes the ability to: create a new object (such as a User or a Place), retrieve an object from a file, database, or other source, perform operations on objects (such as counting or computing statistics), update the attributes of an object, and destroy an object when it is no longer needed. These actions form the fundamental building blocks of object-oriented programming and allow developers to effectively model real-world objects and relationships within their code.
 
 		General
 
