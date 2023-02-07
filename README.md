@@ -38,7 +38,7 @@
     * A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, 
 	class or method (the length of it will be verified)
 		
-		Python Unit Tests
+		# Python Unit Tests
 
     * Allowed editors: vi, vim, emacs
     * All your files should end with a new line
@@ -59,5 +59,5 @@
 		
 		AUTHORS
 
-	* MESFIN FIKREA-[https://github.com/mesfik]/fikreamesfin@gmail.com
+	* MESFIN FIKREA - [https://github.com/mesfik]/fikreamesfin@gmail.com
 
