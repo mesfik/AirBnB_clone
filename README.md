@@ -1,4 +1,4 @@
-	***0x00. AirBnB clone - The console***
+	***0X00. AIRBNB CLONE - THE CONSOLE***
 
 	An object-oriented program typically includes the ability to: create a new object (such as a User or a Place), 
 	retrieve an object from a file, database, or other source, perform operations on objects (such as counting or 
@@ -57,7 +57,7 @@
 	'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
     * We strongly encourage you to work together on test cases, so that you don’t miss any edge case
 		
-		**AUTHORS**
+		**Authors**
 
 	* MESFIN FIKREA - [https://github.com/mesfik]-[fikreamesfin@gmail.com]
 
