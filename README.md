@@ -10,7 +10,7 @@ These actions form the fundamental building blocks of
 object-oriented programming and allow developers to effectively
 model real-world objects and relationships within their code.
 
-# **General**
+## **General**
 
 - How to create a Python package
 - How to create a command interpreter in Python using the cmd module
@@ -23,9 +23,9 @@ model real-world objects and relationships within their code.
 - What is **kwargs and how to use it
 - How to handle named arguments in a function
 		
-# **Requirements**
+## **Requirements**
 
-# **Python Scripts**
+## **Python Scripts**
 
 - Allowed editors: vi, vim, emacs
 - All your files will be interpreted/compiled 
@@ -48,7 +48,7 @@ and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 sentence explaining what’s the purpose of the module, 
 class or method (the length of it will be verified)
 		
-#**Python Unit Tests**
+## **Python Unit Tests**
 
 - Allowed editors: vi, vim, emacs
 - All your files should end with a new line
@@ -76,7 +76,7 @@ nd python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 - We strongly encourage you to work together on test cases,
 so that you don’t miss any edge case
 		
-# **Authors**
+## **Authors**
 
 - MESFIN FIKREA - [https://github.com/mesfik] - [fikreamesfin@gmail.com]
 
