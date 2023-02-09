@@ -59,5 +59,5 @@
 		
 **Authors**
 
-	* MESFIN FIKREA - [https://github.com/mesfik]-[fikreamesfin@gmail.com]
+MESFIN FIKREA - [https://github.com/mesfik]-[fikreamesfin@gmail.com]
 
