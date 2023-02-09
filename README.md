@@ -1,4 +1,4 @@
-	***0X00. AIRBNB CLONE - THE CONSOLE***
+**0X00. AIRBNB CLONE - THE CONSOLE**
 
 	An object-oriented program typically includes the ability to: create a new object (such as a User or a Place), 
 	retrieve an object from a file, database, or other source, perform operations on objects (such as counting or 
