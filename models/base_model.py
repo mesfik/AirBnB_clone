@@ -5,9 +5,12 @@ import datetime
 """
 A python module for a base model of airbnb
 """
+
+
 class BaseModel():
     """
-    A class BaseModel that defines all common attributes/methods for other classes:
+    A class BaseModel that defines all common
+    attributes/methods for other classes:
     """
     def __init__(self, *args, **kwargs):
         """
@@ -31,17 +34,19 @@ class BaseModel():
                 id
                 __dict__
         """
-        return ("[{}] {} {}".format(self.__class__.__name__, self.id, self.__dict__))
+        _class = self.__class__.__name__
+        return "[{}] {} {}".format(_class, self.id, self.__dict__)
 
     def save(self):
         """
-        A public instance method that updates datetime 
+        A public instance method that updates datetime
         """
         self.updated_at = datetime.datetime.now()
 
     def to_dict(self):
         """
-        A public instance method dictionary containing all keys/values of __dict__
+        A public instance method dictionary containing
+        all keys/values of __dict__
         Return: all keys/values of __dict__
         """
         base_dict = self.__dict__.copy()
