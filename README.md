@@ -1,6 +1,6 @@
 # ***0X00. AIRBNB CLONE - THE CONSOLE***
 
-# *holberton BnB ![AirBnb](AirBnB.png)
+# *holberton BnB* ![AirBnb](AirBnB.png)
 
 - An object-oriented program typically includes the ability to:
 create a new object (such as a User or a Place),
