@@ -10,7 +10,9 @@ class FileStorage:
     """ A class that serializes instances to a JSON file
     and deserializes JSON file to instances
     """
+
     __file_path = "file.json"
+
     def __init__(self):
         """
         Initialization of private instance attribute
@@ -41,7 +43,7 @@ class FileStorage:
         odict = self.__objects
         objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
         with open(FileStorage.__file_path, 'w') as file:
-             json.dump(objdict, file)
+            json.dump(objdict, file)
 
     def reload(self):
         """ A public instance method to deserialize the json
