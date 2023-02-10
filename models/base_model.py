@@ -20,6 +20,9 @@ class BaseModel():
         Args: *args: non key worded argument
               **kwargs: key worded arguments
         """
+        self.id = str(uuid.uuid4())
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
         if kwargs:
             for key, value in kwargs.items():
                 if (key != '__class__'):
@@ -29,9 +32,6 @@ class BaseModel():
             creat = datetime.strptime(creat, '%Y-%m-%dT%H:%M:%S.%f')
             update = datetime.strptime(update, '%Y-%m-%dT%H:%M:%S.%f')
         else:
-            self.id = str(uuid.uuid4())
-            self.created_at = datetime.now()
-            self.updated_at = datetime.now()
             models.storage.new(self)
 
     def __str__(self):
