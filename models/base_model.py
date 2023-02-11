@@ -58,10 +58,10 @@ class BaseModel():
         all keys/values of __dict__
         Return: all keys/values of __dict__
         """
-        base_dict = self.__dict__.copy()
+        b_dict = self.__dict__.copy()
         if type(self.created_at) is not str:
-            base_dict["created_at"] = self.created_at.isoformat()
+            b_dict["created_at"] = self.created_at.isoformat()
         if type(self.updated_at) is not str:
-            base_dict["updated_at"] = self.updated_at.isoformat()
-        base_dict["__class__"] = self.__class__.__name__
-        return base_dict
+            b_dict["updated_at"] = self.updated_at.isoformat()
+        b_dict["__class__"] = self.__class__.__name__
+        return b_dict
