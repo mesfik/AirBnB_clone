@@ -37,7 +37,7 @@ class FileStorage:
         """ A public instance method that serilizes object to json
         """
         objects = self.__objects
-        obj_dict = {obj_id: objects[obj_id].to_dict() for obj_id in objects.keys()}
+        obj_dict = {o_id: objects[o_id].to_dict() for o_id in objects.keys()}
         with open(self.__file_path, 'w') as file:
             json.dump(obj_dict, file)
 
