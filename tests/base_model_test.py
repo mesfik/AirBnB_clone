@@ -3,7 +3,7 @@
 """
 A unittest for the base model
 """
-from models import BaseModel
+from models.base_model import BaseModel
 import unittest
 import uuid
 from datetime import datetime, timedelta
@@ -40,12 +40,12 @@ class TestBaseModel(unittest.TestCase):
         base_dict = baseM.to_dict()
         self.assertIsInstance(base_dict, dict)
         self.assertEqual(base_dict['id'], baseM.id)
-        self.assertEqual(base_dict['class'], baseM.__class__.__name__)
+        self.assertEqual(base_dict['__class__'], baseM.__class__.__name__)
         self.assertEqual(baseM.created_at.isoformat(), base_dict['created_at'])
         self.assertEqual(baseM.updated_at.isoformat(), base_dict['updated_at'])
         self.assertIsInstance(base_dict['created_at'], str)
         self.assertIsInstance(base_dict['updated_at'], str)
-        self.assertEqual(base_dict['class'], 'BaseModel')
+        self.assertEqual(base_dict['__class__'], 'BaseModel')
 
 
 if __name__ == "__main__":
