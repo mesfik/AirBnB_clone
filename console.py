@@ -18,7 +18,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_EOF(self, line):
         """
-        EOF method used to exit the program
+        End Of File: EOF command used to exit the program
         """
         return True
 
