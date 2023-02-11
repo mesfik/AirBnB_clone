@@ -23,9 +23,10 @@ class BaseModel():
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
+
         if kwargs:
             for key, value in kwargs.items():
-                if (key != '__class__'):
+                if (key != "__class__"):
                     setattr(self, key, value)
             creat = self.created_at
             update = self.updated_at
@@ -41,8 +42,8 @@ class BaseModel():
                 id
                 __dict__
         """
-        _class = self.__class__.__name__
-        return "[{}] {} {}".format(_class, self.id, self.__dict__)
+        nclass = self.__class__.__name__
+        return "[{}] {} {}".format(nclass, self.id, self.__dict__)
 
     def save(self):
         """
@@ -58,7 +59,9 @@ class BaseModel():
         Return: all keys/values of __dict__
         """
         base_dict = self.__dict__.copy()
-        base_dict['class'] = self.__class__.__name__
-        base_dict['created_at'] = self.created_at.isoformat()
-        base_dict['updated_at'] = self.updated_at.isoformat()
+        if type(self.created_at) is not str:
+            base_dict["created_at"] = self.created_at.isoformat()
+        if type(self.created_at) is not str:
+            base_dict["updated_at"] = self.created_at.isoformat()
+        base_dict["__class__"] = self.__class__.__name__
         return base_dict
