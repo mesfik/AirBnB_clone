@@ -61,7 +61,7 @@ class BaseModel():
         base_dict = self.__dict__.copy()
         if type(self.created_at) is not str:
             base_dict["created_at"] = self.created_at.isoformat()
-        if type(self.created_at) is not str:
-            base_dict["updated_at"] = self.created_at.isoformat()
+        if type(self.updated_at) is not str:
+            base_dict["updated_at"] = self.updated_at.isoformat()
         base_dict["__class__"] = self.__class__.__name__
         return base_dict
