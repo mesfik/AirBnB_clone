@@ -20,7 +20,9 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = "(hbnb) "
 
-    __class = ["BaseModel"]
+    __class = {"BaseModel": BaseModel, "User": User,
+               "Amenity": Amenity, "City": City,
+               "State": State, "Place": Place, "Review": Review}
 
     def do_quit(self, line):
         """Quit command to exit the program
@@ -110,7 +112,64 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
+    def do_all(self, arg):
+        """all: Prints all string representation
+        of all instances based or not on the class name.
+        """
+        objects = []
+        if not arg:
+            for obj in storage.all().values():
+                objects.append(str(obj))
+        elif arg in HBNBCommand.__class:
+            for obj in storage.all().values():
+                if type(obj).__name__ == arg:
+                    objects.append(str(obj))
+        else:
+            print("** class doesn't exist **")
+            return
 
+        if objects:
+            print("[{}]".format(", ".join(objects)))
+        else:
+            print("[]")
+
+    def do_update(self, args):
+        """update: Updates an instance based on the class name
+        and id by adding or updating attribute
+        (save the change into the JSON file).
+        """
+        if len(args) == 0:
+            print("** class name missing **")
+            return
+        args = args.split()
+        if args[0] not in HBNBCommand.__class:
+            print("** class doesn't exist **")
+            return
+
+        elif len(args) == 1:
+            print("** instance id missing **")
+            return
+
+        else:
+
+            key = "{}.{}".format(args[0], args[1])
+            
+            if key not in storage.all():
+                print("** no instance found **")
+                return
+            elif len(key) < 3:
+                print("** attribute name missing **")
+                return
+
+            elif len(obj) < 4:
+                print("** value missing **")
+                return
+
+            else:
+                 obj = storage.all().get(key)
+                 value = eval(args[3])
+                 setattr(obj, args[2], value)
+                 odels.save()
 
 
 
