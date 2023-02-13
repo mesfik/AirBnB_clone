@@ -5,6 +5,13 @@ the console module
 import cmd
 from models.base_model import BaseModel
 from models import storage
+from models.user import User
+from models.place import Place
+from models.city import City
+from models.amenity import Amenity
+from models.state import State
+from models.review import Review
+
 import sys
 
 
@@ -57,20 +64,54 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 0:
             print("** class name missing **")
             return
-        else:
-            args = args.split()
-            if len(args) == 1:
-                print("** instance id missing **")
+        args = args.split()
 
-            class_name, object_id = args
-            if class_name not in HBNBCommand.__class:
-                print("** class doesn't exist **")
-            else:
-                key = "{}.{}".format(class_name, object_id)
-                if key in HBNBCommand.__class:
-                    print(key)
-                else:
-                    print("** no instance found **")
+        if args[0] not in HBNBCommand.__class:
+            print("** class doesn't exist **")
+            return
+        
+        if len(args) == 1:
+            print("** instance id missing **")
+            return
+
+        key = "{}.{}".format(args[0], args[1])
+
+        if key in HBNBCommand.__class:
+
+            print(HBNBCommand.__class[key])
+
+        else:
+            print("** no instance found **")
+
+    def do_destroy(self, args):
+        """ Deletes an instance based on the class name
+        and id (save the change into the JSON file).
+        """
+        if len(args) == 0:
+            print("** class name missing **")
+            return
+        args = args.split()
+
+        if args[0] not in HBNBCommand.__class:
+            print("** class doesn't exist **")
+            return
+
+        if len(args) == 1:
+            print("** instance id missing **")
+            return
+
+        key = "{}.{}".format(args[0], args[1])
+
+        if key in HBNBCommand.__class:
+
+            del HBNBCommand.__class[key]
+            models.save()
+
+        else:
+            print("** no instance found **")
+
+
+
 
 
 
